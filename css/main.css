@@ -1,0 +1,122 @@
+:root{
+    --color-verde:#60fb7a;
+    --color-turquesa: #3de6a8;
+    --color-celeste: #2ac3c6;
+    --color-azul-claro: #0098b3;
+    --color-azul: #007a8a;
+    --color-verde-celeste: linear-gradient(to right, #60fb7a, #2ac3c6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-verde);
+    border-bottom: 1em solid var(--color-verde-celeste);
+}
+
+aside{
+    background-color: var(--color-turquesa);
+    margin: 1em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-azul-claro);
+}
+
+h1{
+    font-size: 3em;
+}
+
+img{
+    width: 2em;
+    position: ;
+}
+
+form{
+    background-color: yellow;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-areas: 'mensaje'
+                         'nombre'
+                         'apellido'
+                         'email'
+                         'telefono'
+                         'pais'
+                         'empresa'
+                         'size'
+                         'cargo'
+                         'industria'
+                         'enviar';
+}
+
+form label{
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+#form-1{
+    grid-area: mensaje;
+}
+#form-2{
+    grid-area: nombre;
+}
+#form-3{
+    grid-area: apellido;
+}
+#form-4{
+    grid-area: email;
+}
+#form-5{
+    grid-area: telefono;
+}
+#form-6{
+    grid-area: pais;
+}
+#form-7{
+    grid-area: empresa;
+}
+#form-8{
+    grid-area: size;
+}
+#form-9{
+    grid-area: cargo;
+}
+#form-10{
+    grid-area: industria;
+}
+#form-11{
+    grid-area: enviar;
+}
+
+@media (min-width: 768px){
+    form{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 'mensaje mensaje'
+                             'nombre apellido'
+                             'email email'
+                             'telefono pais'
+                             'empresa size'
+                             'cargo industria'
+                             'enviar enviar';
+    }
+}
