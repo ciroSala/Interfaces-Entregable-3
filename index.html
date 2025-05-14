@@ -4,62 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/main.js" defer></script>
     <title>Form</title>
 </head>
 <body>
         <header>
-            <h1>Globant</h1>
-            <img src="/img/menu.png" alt="">
+            <img src="/img/globantLogoDark.svg" alt="" id="imgHeader">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">
+                            <button id="buttonContactarnos">
+                                CONTACTARNOS
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Nuestro servicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Nuestro trabajo
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <img src="/img/menu.png" alt="menu" id="menu">
         </header>
         <main>
             <aside>
-                <h1>¿En que podemos ayudarte?</h1>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/img/asideMobile.png">
+                    <source media="(min-width: 768px)" srcset="/img/aside.png">
+                    <img src="/img/aside.png" alt="Mujer con computadora">
+                  </picture>
             </aside>
-            <form action="">
-                <div id="form-1">
-                    <label for="mensaje">Mensaje</label>
-                    <input type="text" id="mensaje">
-                </div>
-                <div id="form-2">
-                    <label for="nombre">Nombre</label>
-                <input type="text" id="nombre">
-                </div>
-                <div id="form-3">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido">
-                </div>
-                <div id="form-4">
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-                </div>
-                <div id="form-5">
-                    <label for="telefono">Telefono</label>
-                    <input type="tel" id="telefono">
-                </div>
-                <div id="form-6">
-                    <label for="pais">País</label>
-                    <input type="text" id="pais">
-                </div>
-                <div id="form-7">
-                    <label for="empresa">Empresa</label>
-                    <input type="text" id="empresa">
-                </div>
-                <div id="form-8">
-                    <label for="size">Tamaño de la compañia</label>
-                    <input type="text" id="size">
-                </div>
-                <div id="form-9">
-                    <label for="cargo">Cargo</label>
-                    <input type="text" id="cargo">
-                </div>
-                <div id="form-10">
-                    <label for="industria">Industria</label>
-                    <input type="text" id="industria">
-                </div>
-                <div id="form-11">
-                    <button type="submit">ENVIAR</button>
-                </div>
-            </form>
+            <section>
+                <h1>
+                    ¿En qué podemos ayudarte?
+                </h1>
+                <form action="" id="form">
+                    <div id="form-1">
+                        <label for="mensaje">Mensaje  <span>*</span></label>
+                        <textarea name="mensaje" id="mensaje" rows="8" cols="40"></textarea>
+                    </div>
+                    <div id="form-2">
+                        <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div id="form-3">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
+                    <div id="form-4">
+                        <label for="email">Email  <span>*</span></label>
+                        <input required type="email" id="email" name="email">
+                    </div>
+                    <div id="form-5">
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" id="tel" name="tel">
+                    </div>
+                    <div id="form-6">
+                        <label for="pais">País</label>
+                        <input type="text" id="pais" name="pais">
+                    </div>
+                    <div id="form-7">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                    <div id="form-8">
+                        <label for="size">Tamaño de la compañia</label>
+                        <input type="text" id="size" name="size">
+                    </div>
+                    <div id="form-9">
+                        <label for="cargo">Cargo</label>
+                        <input type="text" id="cargo" name="cargo">
+                    </div>
+                    <div id="form-10">
+                        <label for="industria">Industria</label>
+                        <input type="text" id="industria" name="industria">
+                    </div>
+                    <div id="form-11">
+                        <button type="submit" id="buttonEnviar">ENVIAR</button>
+                    </div>
+                </form>
+            </section>
         </main>
+        <footer>
+            <div>
+                <img src="/img/globantLogo.png" alt="Logo de Globant" id="imgFooter">
+                <p>Todos los derechos reservados 2025</p>
+            </div>
+            <section>
+                <a href="">  
+                    Política de privacidad
+                </a>
+                <a href="">  
+                    Términos del servicio
+                </a>
+                <a href=""> 
+                    Política de Cookies
+                </a>
+                <a href=""> 
+                    Site Map
+                </a>
+                <a href="">  
+                    Preferencia de cookies
+                </a>
+                <a href="">  
+                    Política de Vulnerabilidad
+                </a>
+            </section>
+        </footer>
 </body>
 </html>
