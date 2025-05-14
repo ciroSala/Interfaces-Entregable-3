@@ -9,8 +9,6 @@ const empresaInput = document.getElementById('empresa');
 const sizeInput = document.getElementById('size');
 const cargoInput = document.getElementById('cargo');
 const industriaInput = document.getElementById('industria');
-const buttonEnviar = document.getElementById('buttonEnviar');
-
 
 const nombreApellidoPattern = /^[a-zA-Z\s]+$/;  // Para verificar que solo haya letras y espacios
 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // Para verificar un email válido
@@ -27,12 +25,12 @@ function mostrarError(inputElement, mensaje) {
         existeError.remove();
     }
     inputElement.classList.add('error');
-    inputElement.parentElement.appendChild(errorDiv);
+    inputElement.parentElement.appendChild(divError);
 }
 
 // Función para eliminar mensajes de error y quitar la clase de error
 function limpiarError(inputElement) {
-    const divError = inputElement.parentElement.querySelector('.error-message');
+    const divError = inputElement.parentElement.querySelector('.divError');
     if (divError) {
         divError.remove();
     }
@@ -141,7 +139,10 @@ cargoInput.addEventListener('input', validarCargo);
 industriaInput.addEventListener('input', validarIndustria);
 
 
-document.getElementById('form').addEventListener('submit', function(event) {
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    console.log('Formulario enviado');
+    // Validar todos los campos antes de enviar el formulario
     const esMensajeValido = validarMensaje();
     const esNombreValido = validarNombre();
     const esApellidoValido = validarApellido();
@@ -154,7 +155,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
     const esIndustriaValido = validarIndustria();
 
     if (esMensajeValido && esNombreValido && esApellidoValido && esEmailValido && esTelefonoValido && esPaisValido && esEmpresaValido && esSizeValido && esCargoValido && esIndustriaValido) {
-        form.submit();
+        //form.submit();
+        console.log('Formulario válido, enviando datos...');
     } else {
         console.log('Formulario inválido, por favor corrija los errores.');
     }
