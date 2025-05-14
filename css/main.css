@@ -95,19 +95,19 @@ form{
     width: 90%;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(11, 1fr);
-    grid-template-areas: 'mensaje mensaje'
-                         'nombre nombre'
-                         'apellido apellido'
-                         'email email'
-                         'telefono telefono'
-                         'pais pais'
-                         'empresa empresa'
-                         'size size'
-                         'cargo cargo'
-                         'industria industria'
-                         'enviar .';
+    grid-template-areas: 'mensaje'
+                         'nombre'
+                         'apellido'
+                         'email'
+                         'telefono'
+                         'pais'
+                         'empresa'
+                         'size'
+                         'cargo'
+                         'industria'
+                         'enviar';
     box-shadow: 5px 5px 10px black;
     margin: 1em;
 }
