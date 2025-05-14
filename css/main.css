@@ -68,7 +68,7 @@ main{
     margin-bottom: 2em;
 }
 
-aside{
+main aside{
     width: 100%;
     height: 30%;
 }
@@ -115,8 +115,7 @@ form{
 form div{
     display: flex;
     flex-direction: column;
-    margin: 1em;
-    padding: 1em;
+    margin: 1.5em;
 }
 
 form label{
@@ -218,7 +217,10 @@ footer a:hover{
 }
 
 .error{
-    
+    border: none;
+    background-color: #ffe0e0; /* Cambia el color de fondo a un rojo muy claro */
+    color: #8b0000; /* Cambia el color del texto a un rojo oscuro */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3); /
 }
 
 @media (min-width: 768px){
