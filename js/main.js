@@ -1,3 +1,7 @@
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav');
+const overlay = document.getElementById('overlay');
+const body = document.querySelector('body');
 const form = document.getElementById('form');
 const mensajeInput = document.getElementById('mensaje');
 const nombreInput = document.getElementById('nombre');
@@ -13,6 +17,18 @@ const industriaInput = document.getElementById('industria');
 const nombreApellidoPattern = /^[a-zA-Z\s]+$/;  // Para verificar que solo haya letras y espacios
 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // Para verificar un email válido
 const telefonoPattern = /^\+?(\d[\s-]?){7,15}$/; // Para verificar un teléfono válido
+
+menu.addEventListener('click', function() {
+    nav.classList.add('visible');
+    overlay.classList.add('visible');
+    body.classList.add('bloquear-scroll');
+});
+
+overlay.addEventListener('click', function() { 
+    nav.classList.remove('visible');
+    overlay.classList.remove('visible');
+    body.classList.remove('bloquear-scroll');
+});
 
 // Función para mostrar mensajes de error
 function mostrarError(inputElement, mensaje) {
